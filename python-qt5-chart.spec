@@ -13,6 +13,8 @@ URL:		https://www.riverbankcomputing.com/software/pyqtchart/
 Source0:	http://pypi.io/packages/source/p/pyqtchart/%{sname}-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(python)
+BuildRequires:	qmake5
+BuildRequires:	qt5-qtbase-macros
 BuildRequires:	python-qt5-devel
 BuildRequires:	python-sip
 BuildRequires:	python-sip-qt5
