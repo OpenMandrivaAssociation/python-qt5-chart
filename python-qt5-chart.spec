@@ -33,8 +33,7 @@ The bindings sit on top of PyQt5 and are implemented as a single module.
 %autosetup -p1 -n %{sname}-%{version}
 
 %build
-### Python 3 build:
-%{__python} ./configure.py \
+python ./configure.py \
   --pyqt-sipdir=%{_datadir}/sip/PyQt5 \
   --qmake="%{_qt5_bindir}/qmake" \
   --debug \
