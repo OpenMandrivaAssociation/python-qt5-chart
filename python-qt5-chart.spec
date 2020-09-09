@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(python)
 BuildRequires:	python-qt5-devel
 BuildRequires:	python-sip
 BuildRequires:	python-sip-qt5
+BuildRequires:	python-qt5-qscintilla
 BuildRequires:	pkgconfig(Qt5Charts)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
