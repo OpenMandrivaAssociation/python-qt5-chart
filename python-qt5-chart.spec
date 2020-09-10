@@ -58,7 +58,7 @@ done
 %doc %{_docdir}/%{name}/examples
 %{python_sitearch}/PyQt5/QtChart.*
 %{python_sitearch}/PyQtChart-%{version}.dist-info
-%{_datadir}/python-sip/PyQt5/QtChart/
+%{_datadir}/sip/PyQt5/QtChart/
 %dir %{_qt5_datadir}/qsci/
 %dir %{_qt5_datadir}/qsci/api/
 %dir %{_qt5_datadir}/qsci/api/python/
