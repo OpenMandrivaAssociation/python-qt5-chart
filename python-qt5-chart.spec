@@ -5,7 +5,7 @@
 
 Name:		python-qt5-chart
 Version:	5.15.0
-Release:	1
+Release:	2
 Summary:	Set of Python bindings for The Qt Charts library
 License:	GPLv3
 Group:		Development/KDE and Qt
@@ -28,7 +28,6 @@ BuildRequires:	pkgconfig(Qt5Widgets)
 PyQtChart is a set of Python bindings for The Qt Company's Qt Charts library.
 The bindings sit on top of PyQt5 and are implemented as a single module.
 
-
 %prep
 %autosetup -p1 -n %{sname}-%{version}
 
@@ -36,7 +35,6 @@ The bindings sit on top of PyQt5 and are implemented as a single module.
 python ./configure.py \
   --pyqt-sipdir=%{_datadir}/sip/PyQt5 \
   --qmake="%{_qt5_bindir}/qmake" \
-  --debug \
   --verbose
 
 %make_build CXXFLAGS="%{optflags} -fPIC \$(DEFINES)"
