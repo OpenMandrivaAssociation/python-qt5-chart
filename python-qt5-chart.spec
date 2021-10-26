@@ -5,7 +5,7 @@
 
 Name:		python-qt5-chart
 Version:	5.15.0
-Release:	2
+Release:	3
 Summary:	Set of Python bindings for The Qt Charts library
 License:	GPLv3
 Group:		Development/KDE and Qt
@@ -18,7 +18,7 @@ BuildRequires:	qt5-qtbase-macros
 BuildRequires:	python-qt5-devel
 BuildRequires:	python-sip
 BuildRequires:	python-sip-qt5
-BuildRequires:	python-qt5-qscintilla
+#BuildRequires:	python-qt5-qscintilla
 BuildRequires:	pkgconfig(Qt5Charts)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Gui)
