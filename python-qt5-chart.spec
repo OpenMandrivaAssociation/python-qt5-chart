@@ -18,6 +18,9 @@ BuildRequires:	qt5-qtbase-macros
 BuildRequires:	python-qt5-devel
 BuildRequires:	python-sip
 BuildRequires:	python-sip-qt5
+BuildRequires:	python-qt-builder
+# For some reason this is not pulled in by the previous BR's
+# even though it is listed as a require.
 #BuildRequires:	python-qt5-qscintilla
 BuildRequires:	pkgconfig(Qt5Charts)
 BuildRequires:	pkgconfig(Qt5Core)
