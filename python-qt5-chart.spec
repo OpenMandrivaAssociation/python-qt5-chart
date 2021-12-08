@@ -4,8 +4,8 @@
 %define sname PyQtChart
 
 Name:		python-qt5-chart
-Version:	5.15.0
-Release:	4
+Version:	5.15.5
+Release:	1
 Summary:	Set of Python bindings for The Qt Charts library
 License:	GPLv3
 Group:		Development/KDE and Qt
@@ -32,16 +32,18 @@ The bindings sit on top of PyQt5 and are implemented as a single module.
 %autosetup -p1 -n %{sname}-%{version}
 
 %build
-python ./configure.py \
-  --pyqt-sipdir=%{_datadir}/sip/PyQt5 \
-  --qmake="%{_qt5_bindir}/qmake" \
-  --verbose
+cd %{_builddir}/%{sname}-%{version}
+sip-build --no-make --api-dir=%{_qt5_datadir}/qsci/api/python \
+--scripts-dir=%{_datadir}/sip/PyQt5/QtChart
+
+cd build
 
 %make_build CXXFLAGS="%{optflags} -fPIC \$(DEFINES)"
 
 %install
-### python 3 Install:
+cd build
 %make_install INSTALL_ROOT=%{buildroot}
+cd ../
 
 mkdir -p %{buildroot}%{_docdir}/%{name}/examples
     cp -fr examples/* %{buildroot}%{_docdir}/%{name}/examples/
@@ -51,12 +53,12 @@ for i in %{buildroot}%{python_sitearch}/PyQt5/*.so ; do
     test -x $i  || chmod a+rx $i
 done
 
-%files
+%files	
 %doc ChangeLog NEWS README
 %doc %{_docdir}/%{name}/examples
 %{python_sitearch}/PyQt5/QtChart.*
 %{python_sitearch}/PyQtChart-%{version}.dist-info
-%{_datadir}/sip/PyQt5/QtChart/
+%{python_sitearch}/PyQt5/bindings/QtChart/*
 %dir %{_qt5_datadir}/qsci/
 %dir %{_qt5_datadir}/qsci/api/
 %dir %{_qt5_datadir}/qsci/api/python/
