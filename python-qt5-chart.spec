@@ -36,8 +36,7 @@ The bindings sit on top of PyQt5 and are implemented as a single module.
 
 %build
 cd %{_builddir}/%{sname}-%{version}
-sip-build --no-make --api-dir=%{_qt5_datadir}/qsci/api/python \
---scripts-dir=%{_datadir}/sip/PyQt5/QtChart
+sip-build --no-make --api-dir=%{_qt5_datadir}/qsci/api/python
 
 cd build
 
