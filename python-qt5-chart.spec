@@ -4,7 +4,7 @@
 %define sname PyQtChart
 
 Name:		python-qt5-chart
-Version:	5.15.5
+Version:	5.15.6
 Release:	1
 Summary:	Set of Python bindings for The Qt Charts library
 License:	GPLv3
