@@ -5,7 +5,7 @@
 
 Name:		python-qt5-chart
 Version:	5.15.6
-Release:	2
+Release:	3
 Summary:	Set of Python bindings for The Qt Charts library
 License:	GPLv3
 Group:		Development/KDE and Qt
